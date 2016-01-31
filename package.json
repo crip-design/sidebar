@@ -1,0 +1,29 @@
+{
+  "name": "crip-sidebar",
+  "version": "1.0.0",
+  "description": "Crip Design Sidebar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crip-design/sidebar.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "sidebar",
+    "angular",
+    "javascript"
+  ],
+  "author": "Igors Krasjukovs <tahq69@gmail.com> (https://github.com/tahq69)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crip-design/sidebar/issues"
+  },
+  "homepage": "https://github.com/crip-design/sidebar#readme",
+  "dependencies": {
+    "cripweb": "^1.0.0",
+    "gulp": "^3.9.0"
+  }
+}

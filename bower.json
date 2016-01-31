@@ -1,0 +1,27 @@
+{
+  "name": "crip-sidebar",
+  "homepage": "https://github.com/crip-design/sidebar",
+  "authors": [
+    "Igors Krasjukovs <tahq69@gmail.com>"
+  ],
+  "description": "Crip Design Sidebar",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "bootstrap",
+    "sidebar",
+    "angular",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6"
+  }
+}
