@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+
+.crip-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $sidebar-collapsed-width;
+  overflow-y: auto;
+
+  &.in {
+    width: $sidebar-width;
+
+    .text {
+      display: inline-block;
+    }
+
+    .icon {
+      display: inline-block;
+      width: auto;
+      min-width: $sidebar-line-height;
+    }
+  }
+
+  .text {
+    display: none;
+  }
+
+  .icon {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    width: $sidebar-width;
+
+    &.out {
+      width: $sidebar-collapsed-width;
+
+      .text {
+        display: none;
+      }
+
+      .icon {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .text {
+      display: inline-block;
+    }
+
+    .icon {
+      display: inline-block;
+      width: auto;
+      min-width: $sidebar-line-height;
+    }
+  }
+}
