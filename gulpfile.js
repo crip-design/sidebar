@@ -6,7 +6,9 @@ crip.sass(
     'src/assets/sass/**/*.scss',
     'compile-sass',
     false,
-    'dest');
+    'build');
+
+crip.scripts('crip-sidebar.js', false, 'copy-jquery', 'src/assets/js', 'build');
 
 gulp.task('default', function () {
     crip.gulp.start('crip-default');
