@@ -18,6 +18,7 @@
             throw new Error('cripSidebar do not support multiple/zero elements!');
 
         expandActive(sidebar);
+        addEventListeners(sidebar);
 
         return true;
     }
@@ -35,12 +36,23 @@
         });
     }
 
+    function addEventListeners($elem) {
+        $elem.find('.crip-drop').each(function (i, drop) {
+            var $drop = $(drop);
+            if (!$drop.hasClass('in')) {
+                console.log($drop, $drop.prev('a'));
+                $drop.prev('a').on('click', onInactiveClick)
+            }
+        });
+
+    }
+
     function onActiveClick() {
         var $elem = $(this),
-            $drop = $elem.next();
+            $drop = $elem.next('.crip-drop');
 
         $drop.removeClass('in');
-        if (!hasOpenAny())
+        if (!hasOpenAny($drop))
             sidebar.removeClass('in');
 
         $elem
@@ -52,9 +64,9 @@
 
     function onInactiveClick() {
         var $elem = $(this),
-            $drop = $elem.next();
+            $drop = $elem.next('.crip-drop');
 
-        closeAnyOpen();
+        closeAnyOpen($elem);
         $drop.addClass('in');
         sidebar.addClass('in');
 
@@ -65,19 +77,19 @@
         return false;
     }
 
-    function hasOpenAny() {
-        return !!sidebar.find('.crip-drop.in').length;
+    function hasOpenAny($except) {
+        var except = !$except ? 0 : $except.find('.crip-drop.in').length;
+        return !!(sidebar.find('.crip-drop.in').length - except);
     }
 
-    function closeAnyOpen() {
+    function closeAnyOpen($exclude) {
         sidebar.find('.crip-drop.in').each(function (index, elem) {
             var $elem = $(elem);
-            if ($elem.hasClass('in')) {
+            if (($exclude && !$exclude.find($elem) && $elem.hasClass('in')) || (!$exclude && $elem.hasClass('in')))
                 $elem
                     .removeClass('in')
                     .prev()
                     .removeClass('active');
-            }
         });
     }
 

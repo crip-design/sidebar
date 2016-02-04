@@ -35,13 +35,16 @@ body {
   }
 
   .crip-drop {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
 
     &.in {
-      height: auto;
-      overflow: visible;
+      max-height: 400px;
     }
+  }
+
+  .fa.pull-right {
+    display: none;
   }
 
   @media (min-width: $screen-sm-min) {
@@ -69,6 +72,10 @@ body {
       display: inline-block;
       width: auto;
       min-width: $sidebar-line-height;
+    }
+
+    .fa.pull-right {
+      display: inline-block;
     }
   }
 }

@@ -8,6 +8,13 @@
     <title>Crip Design Sidebar</title>
 
     <link href="crip-sidebar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: 'PT Sans', sans-serif;
+        }
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,16 +37,38 @@
             <a href="#" class="active">
                 <i class="icon">i</i>
                 <span class="text">Crip</span>
+                <i class="fa fa-sort-desc pull-right"></i>
             </a>
             <ul class="crip-drop">
                 <li>
-                    <a href>
+                    <a href="#">
                         <i class="icon">i</i>
                         <span class="text">Design</span>
+                        <i class="fa fa-sort-desc pull-right"></i>
                     </a>
+                    <ul class="crip-drop">
+                        <li>
+                            <a href>
+                                <i class="icon">i</i>
+                                <span class="text">Sidebar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href>
+                                <i class="icon">i</i>
+                                <span class="text">Input</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href>
+                                <i class="icon">i</i>
+                                <span class="text">Theme</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href class="active">
+                    <a href>
                         <i class="icon">i</i>
                         <span class="text">Laravel</span>
                     </a>

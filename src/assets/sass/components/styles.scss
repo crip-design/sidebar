@@ -19,6 +19,7 @@
 
     a {
       color: $sidebar-color;
+      position: relative;
       text-decoration: none;
       cursor: pointer;
       display: block;
@@ -32,6 +33,19 @@
 
       .icon {
         color: $sidebar-icon-color;
+      }
+
+      .text {
+        position: absolute;
+        left: $sidebar-spacing * 3;
+      }
+    }
+
+    .crip-drop li a {
+      padding-left: $sidebar-spacing * 2;
+
+      .text {
+        left: $sidebar-spacing * 4;
       }
     }
   }

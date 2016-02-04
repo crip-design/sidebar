@@ -1,0 +1,9 @@
+.crip-sidebar {
+  transition: width ($sidebar-animation-duration/4) ease-out;
+  .crip-drop {
+    transition: max-height $sidebar-animation-duration ease-out;
+    &.in {
+      transition: max-height $sidebar-animation-duration ease-in;
+    }
+  }
+}
